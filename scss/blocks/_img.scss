@@ -1,0 +1,46 @@
+.img{
+    display: block;
+    img{
+        height: 100%;
+    }
+    &_12_5{
+        height: rem(12.5);
+    }
+    &_10{
+        height: rem(10);
+    }
+    &_15{
+        height: rem(15);
+    }
+    &_20{
+        height: rem(20);
+    }
+    &_24{
+        height: rem(24);
+    }
+    &_25{
+        height: rem(25);
+    }
+    &_30{
+        height: rem(30);
+    }
+    &_40{
+        height: rem(40);
+    }
+    &_60{
+        height: rem(60);
+    }
+    &_190{
+        height: rem(190);
+    }
+}
+
+@media (max-width: rem(500)){
+    h1{
+        .img{
+            &_30{
+                height: rem(22);
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.path{
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+        display: flex;
+        align-items: center;
+        margin-right: rem(5);
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__img{
+        margin-right: rem(5);
+    }
+}

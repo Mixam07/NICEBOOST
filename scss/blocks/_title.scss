@@ -1,0 +1,124 @@
+.title{
+    font-family: 'Quarion';
+    font-weight: 700;
+    font-size: rem(32);
+    line-height: em(43, 32);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    &_main{
+        font-size: rem(48);
+        line-height: em(60, 48);
+        margin-bottom: rem(10);
+        max-width: rem(600);
+    }
+    &_card{
+        font-weight: 600;
+        font-size: rem(22);
+        line-height: em(30, 22);
+    }
+    &_info{
+        font-size: rem(20);
+        margin-bottom: rem(5);
+    }
+    &_categories{
+        text-transform: none;
+        font-size: rem(14);
+        color: rgba(255, 255, 255, 0.39);
+        margin-bottom: rem(-5);
+    }
+    &_filter{
+        font-family: 'Inter';
+        margin-bottom: rem(10);
+        font-size: rem(16);
+        line-height: em(24, 16);
+        letter-spacing: -0.025em;
+        color: #9B9D9C;
+    }
+    &_mini{
+        font-family: 'Inter';
+        text-transform: none;
+        font-size: rem(16);
+        letter-spacing: -0.025em;
+        color: #9B9D9C;
+    }
+    &_description{
+        font-size: rem(35);
+    }
+    &_list{
+        margin-bottom: rem(15);
+    }
+}
+
+.title-section{
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(40);
+}
+
+.without-margin{
+    margin: 0;
+}
+
+@media (max-width: rem(1500)){
+    .title{
+        &_description{
+            font-size: rem(32);
+        }
+    }
+}
+
+@media (max-width: rem(992)){
+    .title{
+        &_main{
+            font-size: rem(40);
+            max-width: rem(500);
+        }
+    }
+}
+
+@media (max-width: rem(762)){
+    .title{
+        &_main{
+            font-size: rem(32);
+            max-width: rem(400);
+        }
+        &_card{
+            font-size: rem(18);
+        }
+    }
+}
+
+@media (max-width: rem(576)){
+    .title{
+        font-size: rem(20);
+        &_main{
+            max-width: auto;
+            font-size: rem(28);
+            text-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
+        }
+        &_categories{
+            font-size: rem(14);
+        }
+    }
+}
+
+@media (max-width: rem(500)){
+    .title{
+        &_card{
+            font-size: rem(22);
+        }
+    }
+    .title-section{
+        margin-bottom: rem(30);
+    }
+    .without-margin{
+        margin: 0;
+    }
+}
+
+
+@media (max-width: rem(375)){
+    .title{
+        font-size: rem(17);
+    }
+}

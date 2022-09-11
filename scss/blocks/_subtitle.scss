@@ -1,0 +1,49 @@
+.subtitle{
+    font-weight: 500;
+    max-width: rem(350);
+    margin-left: rem(45);
+    &_main{
+        max-width: rem(350);
+        margin-left: 0;
+        span{
+            font-weight: 700;
+        }
+    }
+    &_info{
+        margin-left: 0;
+        font-weight: 400;
+        color: #9A9A9A;
+        max-width: rem(260);
+        text-align: center;
+    }
+    &_categories{
+        margin-left: 0;
+        max-width: 100%;
+        font-family: 'Quarion';
+        font-weight: 600;
+        font-size: rem(18);
+    }
+    &_list{
+        margin-bottom: rem(10);
+        font-weight: 700;
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: rem(762)){
+    .subtitle{
+        &_main{
+            font-size: rem(15);
+        }
+    }
+}
+
+@media (max-width: rem(576)){
+    .subtitle{
+        &_main{
+            font-size: rem(14);
+            max-width: rem(278);
+        }
+    }
+}

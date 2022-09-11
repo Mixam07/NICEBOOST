@@ -1,0 +1,134 @@
+.footer{
+    padding: rem(50) 0 rem(15) 0;
+    background: #181818;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-areas:"nav logo contact";
+        margin-bottom: rem(35);
+    }
+    &__href{
+        transition: .5s left;
+        display: block;
+        margin-bottom: rem(12);
+        font-size: rem(14);
+        color: #C6C6C6;
+        left: 0;
+        &:hover{
+            position: relative;
+            top: 0;
+            left: rem(5);
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 80px;
+        margin-bottom: rem(15);
+        gap: rem(15);
+        flex-wrap: wrap;
+    }
+    &__item{
+        transition: .5s opacity;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: .44;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__email{
+        font-weight: 600;
+        color: #C6C6C6;
+    }
+    &__info{
+        font-size: rem(12);
+        line-height: em(15, 12);
+        line-height: 127.2%;
+        text-align: center;
+        color: #9A9A9A;
+    }
+    &__nav{
+        grid-area: nav;
+    }
+    &__logo{
+        grid-area: logo;
+    }
+    &__contact{
+        grid-area: contact;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: rem(762)){
+    .footer{
+        &__email{
+            font-size: rem(12);
+        }
+        &__href{
+            &:hover{
+                position: static;
+                left: 0;
+            }
+        }
+        &__item{
+            &:hover{
+                opacity: .44;
+            }
+        }
+    }
+}
+
+@media (max-width: rem(500)){
+    .footer{
+        padding: rem(35) 0;
+        &__wrapper{
+            grid-template-areas:"logo" "nav" "contact";
+            grid-template-columns: 1fr;
+            margin-bottom: rem(45);
+        }
+        &__logo{
+            display: flex;
+            justify-content: center;
+            margin-bottom: rem(25);
+        }
+        &__nav{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 rem(50);
+            margin-bottom: rem(30);
+        }
+        &__list{
+            margin-left: 0;
+            width: auto;
+            flex-direction: row;
+        }
+        &__contact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__email{
+            font-size: rem(16);
+        }
+    }
+}
+
+@media (max-width: rem(425)){
+    .footer{
+        &__nav{
+            padding: 0 rem(25);
+        }
+    }
+}
+
+@media (max-width: rem(375)){
+    .footer{
+        &__nav{
+            padding: 0;
+        }
+    }
+}

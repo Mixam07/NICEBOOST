@@ -1,0 +1,118 @@
+.info{
+    width: 100%;
+    &__list{
+        display: grid;
+        margin-top: rem(85);
+        gap: rem(60);
+        grid-template-columns: repeat(4, 1fr);
+        list-style-type: none;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: rem(5);
+        position: relative;
+        &:nth-child(1){
+            .info__wrap{
+                transform: rotate(-25deg);
+            }
+        }
+        &:nth-child(2){
+            .info__wrap{
+                transform: rotate(5deg);
+                margin-top: rem(20);
+            }
+        }
+        &:nth-child(4){
+            .info__wrap{
+                transform: rotate(10deg);
+                margin-top: rem(40);
+            }
+        }
+        &:hover{
+            .info__wrap{
+                opacity: 1;
+            }
+            .first-item{
+                stop-color: rgba(255, 12, 0, 1);
+            }
+            .second-item{
+                stop-color: rgba(238, 255, 45, 1);
+            }
+        }
+    }
+    .first-item{
+        transition: .5s stop-color;
+        stop-color: #E5453D;
+    }
+    .second-item{
+        transition: .5s stop-color;
+        stop-color: #FF7A2E;
+    }
+    &__bg{
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: rem(207);
+        height: rem(190);
+        z-index: -1;
+        transform: translate(-50%, -50%);
+    }
+    &__wrap{
+        transition: .5s opacity;
+        opacity: .16;
+    }
+    &__img{
+        margin-bottom: rem(15);
+    }
+}
+
+@media (max-width: rem(1200)){
+    .info{
+        &__list{
+            gap: rem(40);
+        }
+    }
+}
+
+@media (max-width: rem(992)){
+    .info{
+        &__list{
+            gap: rem(60);
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: rem(762)){
+    .info{
+        &__item{
+            &:hover{
+                .info__wrap{
+                    opacity: .16;
+                }
+                .first-item{
+                    stop-color: #E5453D;
+                }
+                .second-item{
+                    stop-color: #FF7A2E;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: rem(576)){
+    .info{
+        &__list{
+            margin-top: rem(60);
+            grid-template-columns: repeat(1, 1fr);
+            gap: rem(75);
+        }
+        h2.subtitle{
+            display: none;
+        }
+    }
+}

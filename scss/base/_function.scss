@@ -1,0 +1,23 @@
+//%
+@function prc($pxOne, $pxTwo){
+  $result: calc($pxOne / $pxTwo) * 100%;
+  @return $result;
+}
+
+//REM
+@function rem($px){
+  $result: calc($px / 16) + rem;
+  @return $result;
+}
+
+//PX
+@function px($rem){
+  $result: calc($rem * 16) + px;
+  @return $result;
+}
+
+//EM
+@function em($px, $pxParent){
+  $result: calc($px / $pxParent) + em;
+  @return $result;
+}

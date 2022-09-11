@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "fonts";
+@import "base/function";
+@import "base/mixins";
+@import "base/nullstyle";
+@import "base/variables";
+
+.container{
+    max-width: rem(1130);
+    padding: 0 rem(10);
+    width: 100%;
+    margin: 0 auto;
+}
+
+body{
+    background: #131212;
+}
+
+.popupMenu__body{
+    background: linear-gradient(176.27deg, #131212 4.71%, rgba(19, 18, 18, 0.610513) 31.17%, rgba(19, 18, 18, 0.19) 43.79%), linear-gradient(61.17deg, #131212 29.2%, rgba(19, 18, 18, 0.610513) 54.97%, rgba(19, 18, 18, 0.19) 66.31%), linear-gradient(360deg, #131212 2.84%, rgba(19, 18, 18, 0.610513) 36.63%, rgba(19, 18, 18, 0.19) 52.74%), url("@img/bg/bg_menu.png") center/cover no-repeat;
+}
+.info__item::before{
+    background: url("@img/icons/icons.svg#сomputer") center/contain no-repeat;
+}
+.aside__info{
+    background: linear-gradient(77.07deg, #1B1919 20.16%, rgba(0, 0, 0, 0) 78.58%), url("@img/bg/bg_mini.png") 0 0/cover no-repeat;
+}
+.description__item{
+    background: url('@img/icons/icons.svg#circleCheck')0 center/rem(20) no-repeat;
+}
+.description{
+    background: linear-gradient(176.27deg, #131212 4.71%, rgba(19, 18, 18, 0.610513) 31.17%, rgba(19, 18, 18, 0.19) 43.79%), linear-gradient(95.17deg, #131212 33.87%, rgba(19, 18, 18, 0.610513) 55.47%, rgba(19, 18, 18, 0.19) 65.77%), linear-gradient(360deg, #131212 2.84%, rgba(19, 18, 18, 0.610513) 36.63%, rgba(19, 18, 18, 0.19) 52.74%), url("@img/bg/bg.png") 0 0/cover no-repeat;
+}
+.descriptionCard__element{
+    background: url('@img/icons/icons.svg#circleCheck')0 center/rem(20) no-repeat;
+}
+
+*{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: em(24, 16);
+    color: $text-color;
+}
+
+.wrapper{
+    position: relative;
+    &__container{
+        display: flex;
+        width: 100%;
+        padding: 0;
+        max-width: 100%;
+    }
+    .main{
+        padding: 0 rem(50);
+        padding-top: rem(75);
+        &-card{
+            display: flex;
+            width: 100%;
+            margin-bottom: rem(75);
+        }
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -10;
+        opacity: 0.36;
+        img{
+            width: 100%;
+        }
+        &::before{
+            display: block;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            bottom: rem(-1);
+            left: 0;
+            background: linear-gradient(360deg, #131212 18.92%, rgba(19, 18, 18, 0.610513) 61.46%, rgba(19, 18, 18, 0.19) 85.04%);
+        }
+    }
+}
+
+.ended .ended{
+    display: flex;
+}
+.sale .sale{
+    display: flex;
+}
+.hot .hot{
+    display: flex;
+}
+.green{
+    background: linear-gradient(90deg, rgba(96, 201, 70, 0.54) -14.78%, #2FFF91 451.57%);
+}
+.red{
+    background: linear-gradient(90deg, rgba(229, 69, 61, 0.6) -14.78%, rgba(255, 122, 46, 0.6) 451.57%);
+}
+
+@media (max-width: rem(1200)){
+    .container{
+        max-width: rem(980);/*940*/
+    }
+    .wrapper{
+        &__container{
+            display: flex;
+            max-width: 100%;
+            padding: 0;
+        }
+        .main{
+            &-card{
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+@media (max-width: rem(992)){
+    .container{
+        max-width: rem(740);/*720*/
+    }
+    .wrapper{
+        &__container{
+            flex-direction: column;
+        }
+        .main{
+            padding: 0;
+            padding-top: rem(50);
+        }
+    }
+}
+
+@media (max-width: rem(762)){
+    .container{
+        max-width: rem(560);/*540*/
+    }
+    .wrapper{
+        display: block;
+        &__bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: rem(500);
+            z-index: -1;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: rem(576)){
+    .container{
+        max-width: 100%;
+        padding: 0 rem(15);
+    }
+}
+
+@import "blocks/_img";
+@import "blocks/_btn";
+@import "blocks/_title";
+@import "blocks/_subtitle";
+
+@import "blocks/_path";
+
+@import "blocks/_cards";
+@import "blocks/_card";
+@import "blocks/_nav";
+@import "blocks/_goods";
+
+
+@import "blocks/_header";
+@import "blocks/_promo";
+@import "blocks/_popupMenu";
+@import "blocks/_popular";
+@import "blocks/_review";
+@import "blocks/_info";
+@import "blocks/_footer";
+@import "blocks/_aside";
+@import "blocks/_description";
+@import "blocks/_descriptionCard";
+@import "blocks/_good";
+
+@import "libs/_nouislider";

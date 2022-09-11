@@ -1,0 +1,134 @@
+.descriptionCard{
+    &__path{
+        margin-bottom: rem(25);
+    }
+    &__wrapper{
+        max-width: rem(610);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(10);
+        margin-top: rem(15);
+        margin-bottom: rem(25);
+    }
+    &__item{
+        background: #252323;
+        border-radius: rem(8);
+        padding: rem(15);
+        display: flex;
+        align-items: center;
+    }
+    &__info{
+        margin-left: rem(8);
+    }
+    &__title{
+        letter-spacing: -0.025em;
+        color: #5A5A5A;
+    }
+    &__desc{
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        margin-top: rem(-2);
+    }
+    &__text{
+        font-weight: 500;
+        color: #C7C7C7;
+        margin-bottom: rem(20);
+        max-width: rem(600);
+    }
+    &__description{
+        padding-left: rem(20);
+        margin-bottom: rem(20);
+    }
+    &__elem{
+        padding-left: rem(10);
+        &::marker{
+            font-weight: 700;
+            color: #E5453D;
+        }
+    }
+    &__wrap{
+        margin-bottom: rem(25);
+    }
+    &__list{
+        list-style-type: none;
+    }
+    &__element{
+        margin-bottom: rem(10);
+        padding-left: rem(25);
+        font-weight: 500;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__special{
+        text-decoration-line: underline;
+        color: #F1433A;
+        font-weight: 500;
+    }
+    &__table{
+        border-spacing:0;
+    }
+    &__div{
+        overflow: auto;
+    }
+    &__th{
+        white-space: nowrap;
+        background: linear-gradient(90deg, rgba(229, 69, 61, 0.76) -14.78%, rgba(255, 122, 46, 0.76) 451.57%);
+        box-shadow: inset 0 rem(-1.32974) 0 #111111;
+        font-weight: 700;
+        line-height: em(27, 16);
+        padding: rem(10) rem(20);
+    }
+    &__td{
+        background: #202020;
+        box-shadow: inset 0 rem(-1.32974) 0 rgba(17, 17, 17, 0.08);
+        padding: rem(10) rem(20);
+        line-height: em(27, 16);
+    }
+    &__section{
+        margin-bottom: rem(65);
+    }
+    &__items{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        gap: 0 rem(20);
+        overflow-x: scroll;
+        padding-bottom: rem(30);
+        &::-webkit-scrollbar{
+            background: #1D1D1D;
+            border-radius: rem(26);
+            height: rem(9);
+        }
+        &::-webkit-scrollbar-thumb{
+            background: linear-gradient(90deg, #E5453D -14.78%, #FF7A2E 451.57%);
+            border-radius: rem(26);
+        }
+    }
+    &__goods{
+        margin-top: rem(15);
+        position: relative;
+        height: rem(550);
+        &::after{
+            position: absolute;
+            content: "";
+            z-index: 1;
+            height: 100%;
+            width: rem(350);
+            background: linear-gradient(271.6deg, #131212 5.77%, rgba(19, 18, 18, 0) 62.33%);
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: rem(576)){
+    .descriptionCard{
+        &__recommended{
+            display: none;
+        }
+        &__wrapper{
+            grid-template-columns: 1fr;
+        }
+    }
+}
